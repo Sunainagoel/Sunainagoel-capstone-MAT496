@@ -34,24 +34,14 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 
 I plan to execute these steps to complete my project.
 
-[ ] **Step 1: Environment & Schema Setup:**
-- Set up langgraph and langchain.
-- Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
+- [ ] **Step 1: Environment & Schema Setup:** Set up langgraph and langchain. Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
 
-[ ] **Step 2: Analysis Nodes:**
-- Built the analyze_job_node and analyze_resume_node to extract entities from text.
-- Built the compare_gaps_node to logically derive missing skills.
+- [ ] **Step 2: Analysis Nodes:** Built the analyze_job_node and analyze_resume_node to extract entities from text. Built the compare_gaps_node to logically derive missing skills.
 
-[ ] **Step 3: Tool Integration:**
-- Integrated TavilySearchResults.
-- Built the research_resources_node which iterates over the missing skills list and calls the tool for each one.
+- [ ] **Step 3: Tool Integration:** Integrated TavilySearchResults. Built the research_resources_node which iterates over the missing skills list and calls the tool for each one.
 
-[ ] **Step 4: Graph Construction:**
-- Wired the nodes into a StateGraph.
-- Configured LangSmith tracing for debugging.
-- Added the final report_node to format the output.
+- [ ] **Step 4: Graph Construction:** Wired the nodes into a StateGraph. Configured LangSmith tracing for debugging. Added the final report_node to format the output.
 
 ## Conclusion:
 
 I had planned to achieve an agent that can turn a stressful job application process into an actionable learning plan. I think I have successfully achieved this. The agent effectively identifies that a user is missing a specific skill (e.g., "LangGraph") and immediately provides a URL to learn it. This demonstrates the power of combining logical processing (LangGraph) with external knowledge retrieval (Tools).
-----------
