@@ -36,7 +36,7 @@ I plan to execute these steps to complete my project.
 
 - [X] **Step 1: Environment & Schema Setup:** Set up langgraph and langchain. Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
 
-- [ ] **Step 2: Analysis Nodes:** Built the analyze_job_node and analyze_resume_node to extract entities from text. Built the compare_gaps_node to logically derive missing skills.
+- [X] **Step 2: Analysis Nodes:** Built the analyze_job_node and analyze_resume_node to extract entities from text. Built the compare_gaps_node to logically derive missing skills.
 
 - [ ] **Step 3: Tool Integration:** Integrated TavilySearchResults. Built the research_resources_node which iterates over the missing skills list and calls the tool for each one.
 
