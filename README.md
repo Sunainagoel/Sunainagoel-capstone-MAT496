@@ -34,7 +34,7 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 
 I plan to execute these steps to complete my project.
 
-- [ ] **Step 1: Environment & Schema Setup:** Set up langgraph and langchain. Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
+- [X] **Step 1: Environment & Schema Setup:** Set up langgraph and langchain. Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
 
 - [ ] **Step 2: Analysis Nodes:** Built the analyze_job_node and analyze_resume_node to extract entities from text. Built the compare_gaps_node to logically derive missing skills.
 
