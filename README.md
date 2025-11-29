@@ -1,38 +1,22 @@
-Template for creating and submitting MAT496 capstone project.
-
-# Overview of MAT496
-
-In this course, we have primarily learned Langgraph. This is helpful tool to build apps which can process unstructured `text`, find information we are looking for, and present the format we choose. Some specific topics we have covered are:
-
-- Prompting
-- Structured Output 
-- Semantic Search
-- Retreaval Augmented Generation (RAG)
-- Tool calling LLMs & MCP
-- Langgraph: State, Nodes, Graph
-
-We also learned that Langsmith is a nice tool for debugging Langgraph codes.
-
-------
-
-# Capstone Project objective
-
-The first purpose of the capstone project is to give a chance to revise all the major above listed topics. The second purpose of the capstone is to show your creativity. Think about all the problems which you can not have solved earlier, but are not possible to solve with the concepts learned in this course. For example, We can use LLM to analyse all kinds of news: sports news, financial news, political news. Another example, we can use LLMs to build a legal assistant. Pretty much anything which requires lots of reading, can be outsourced to LLMs. Let your imagination run free.
-
-
--------------------------
-
-# Project report Template
-
-## Title: [your title goes here]
+## Title: CareerGap Agent: Resume vs. Job Description Analyzer
 
 ## Overview
 
-[your overview goes here. My project does this that  etc]
+My project is an AI-powered Career Gap Analyzer. It takes a user's Resume and a target Job Description (JD) as input. Instead of just giving a generic similarity score, it builds a structured knowledge graph of the user's skills versus the job requirements. It identifies specific "Skill Gaps" and then autonomously uses a search tool to find the best, up-to-date learning resources (tutorials/documentation) to fill those gaps.
 
 ## Reason for picking up this project
 
-Explain how this project is aligned with this course content.
+This project perfectly aligns with the advanced topics of the MAT496 course:
+
+1. **LangGraph:** I implemented a StateGraph architecture to orchestrate the workflow. The agent maintains a persistent state (AgentState) as it moves through extraction, analysis, and research nodes.
+
+2. **Retrieval Augmented Generation (RAG):** I implemented Agentic RAG. Instead of relying on a static, outdated vector store, my agent dynamically retrieves live context from the web using semantic search to augment the final report.
+
+3. **Structured Output:** I used Pydantic models to force the LLM to output strict JSON schemas (SkillAnalysis, GapAnalysis), ensuring the agent doesn't just generate text but processes data.
+
+4. **Tool Calling:** The agent autonomously calls the Tavily Search API to find learning resources. It dynamically generates search queries based on the specific gaps identified in the analysis phase.
+
+5. **LangSmith:** I utilized LangSmith for debugging and tracing. Since this is a multi-step agent, LangSmith allowed me to visualize the inputs/outputs of every node and optimize the system prompts.
 
 ## Video Summary Link: 
 
@@ -50,34 +34,24 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 
 I plan to execute these steps to complete my project.
 
-- [TODO] Step 1 involves blah blah
-- [TODO] Step 2 involves blah blah
-- [TODO] Step 3 involves blah blah
-- ...
-- [TODO] Step n involves blah blah
+[ ] **Step 1: Environment & Schema Setup:**
+- Set up langgraph and langchain.
+- Defined Pydantic models (SkillAnalysis, GapAnalysis) to handle Structured Output.
+
+[ ] **Step 2: Analysis Nodes:**
+- Built the analyze_job_node and analyze_resume_node to extract entities from text.
+- Built the compare_gaps_node to logically derive missing skills.
+
+[ ] **Step 3: Tool Integration:**
+- Integrated TavilySearchResults.
+- Built the research_resources_node which iterates over the missing skills list and calls the tool for each one.
+
+[ ] **Step 4: Graph Construction:**
+- Wired the nodes into a StateGraph.
+- Configured LangSmith tracing for debugging.
+- Added the final report_node to format the output.
 
 ## Conclusion:
 
-I had planned to achieve {this this}. I think I have/have-not achieved the conclusion satisfactorily. The reason for your satisfaction/unsatisfaction.
-
+I had planned to achieve an agent that can turn a stressful job application process into an actionable learning plan. I think I have successfully achieved this. The agent effectively identifies that a user is missing a specific skill (e.g., "LangGraph") and immediately provides a URL to learn it. This demonstrates the power of combining logical processing (LangGraph) with external knowledge retrieval (Tools).
 ----------
-
-# Added instructions:
-
-- This is a `solo assignment`. Each of you will work alone. You are free to talk, discuss with chatgpt, but you are responsible for what you submit. Some students may be called for viva. You should be able to each and every line of work submitted by you.
-
-- `commit` History maintenance.
-  - Fork this repository and build on top of that.
-  - For every step in your plan, there has to be a commit.
-  - Change [TODO] to [DONE] in the plan, before you commit after that step. 
-  - The commit history should show decent amount of work spread into minimum two dates. 
-  - **All the commits done in one day will be rejected**. Even if you are capable of doing the whole thing in one day, refine it in two days.  
- 
- - Deadline: Dec 2nd, Tuesday 11:59 pm
-
-
-# Grading: total 25 marks
-
-- Coverage of most of topics in this class: 20
-- Creativity: 5
-  
