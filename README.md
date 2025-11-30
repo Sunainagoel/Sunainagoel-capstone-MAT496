@@ -40,7 +40,9 @@ I plan to execute these steps to complete my project.
 
 - [X] **Step 3: Tool Integration:** Integrated TavilySearchResults. Built the research_resources_node which iterates over the missing skills list and calls the tool for each one.
 
-- [ ] **Step 4: Graph Construction:** Wired the nodes into a StateGraph. Configured LangSmith tracing for debugging. Added the final report_node to format the output.
+- [X] **Step 4: Graph Construction:** Wired the nodes into a StateGraph. Configured LangSmith tracing for debugging. Added the final report_node to format the output.
+
+- [ ] **Step 5: User Interface & Entry Point:** Built the main.py CLI interface to allow users to select between sample scenarios or custom input. Implemented data.py to store robust test cases for demonstration.
 
 ## Conclusion:
 
