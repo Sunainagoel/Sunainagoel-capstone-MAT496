@@ -1,6 +1,5 @@
 """
 This file stores sample inputs for testing the agent.
-You can add more test cases here to show different scenarios in your video.
 """
 
 # SCENARIO 1: Python Developer (The Gap: Kubernetes & AWS)
