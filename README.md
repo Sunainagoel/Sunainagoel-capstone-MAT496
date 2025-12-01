@@ -2,7 +2,7 @@
 
 ## Overview
 
-My project is an AI-powered Career Gap Analyzer. It takes a user's Resume and a target Job Description (JD) as input. Instead of just giving a generic similarity score, it builds a structured knowledge graph of the user's skills versus the job requirements. It identifies specific "Skill Gaps" and then autonomously uses a search tool to find the best, up-to-date learning resources (tutorials/documentation) to fill those gaps.
+My capstone project, the CareerGap Analyzer, acts as an intelligent career coach. Unlike simple keyword matchers, this agent uses a multi-step AI workflow to deeply analyze the semantics of both a Resume and a Job Description. It doesn't just tell you that you aren't a match; it explains why and, more importantly, how to fix it. By leveraging a directed graph architecture (LangGraph), the agent identifies specific technical and soft skill gaps and immediately searches the live web to provide high-quality, free learning resources. It transforms a passive rejection into an active, actionable learning plan.
 
 ## Reason for picking up this project
 
@@ -29,7 +29,6 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 - Very quickly, explain how your agent acts on the input and spits out the output. 
 - show an example run of the agent in the video
 
-
 ## Plan
 
 I plan to execute these steps to complete my project.
@@ -46,4 +45,4 @@ I plan to execute these steps to complete my project.
 
 ## Conclusion:
 
-I had planned to achieve an agent that can turn a stressful job application process into an actionable learning plan. I think I have successfully achieved this. The agent effectively identifies that a user is missing a specific skill (e.g., "LangGraph") and immediately provides a URL to learn it. This demonstrates the power of combining logical processing (LangGraph) with external knowledge retrieval (Tools).
+I had planned to achieve an agent that can turn a stressful job application process into an actionable learning plan. I believe I have successfully achieved this. The agent autonomously decides that a skill is missing and then spins up a search tool to find a solution. It proves that we can outsource not just "writing" tasks to LLMs, but complex analytical workflows. This tool demonstrates how LangGraph and Agentic RAG can create personalized educational pathways from static data, bridging the gap between where a candidate is and where they need to be. My goal of moving beyond simple "chatbot" interactions and to build something that felt like a true agent—software that can reason, plan, and take action—was successfully achieved.
