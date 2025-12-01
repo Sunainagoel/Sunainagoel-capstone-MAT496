@@ -153,3 +153,34 @@ Best of luck on your learning journey! 🎉
 
 [Debug] Missing Skills Found: ['TypeScript', 'GraphQL', 'Apollo Client', 'Docker', 'CI/CD', 'GitHub Actions']
 ```
+## How to Run:
+
+### 1. Prerequisites
+- Python 3.10+
+- OpenAI API Key
+- Tavily API Key (Free tier at tavily.com)
+
+### 2. Setup
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Sunainagoel/Sunainagoel-capstone-MAT496.git
+    cd Sunainagoel-capstone-MAT496
+    ```
+2.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Configure Environment**:
+    Create a `.env` file in the root directory:
+    ```env
+    OPENAI_API_KEY=sk-your-key-here
+    TAVILY_API_KEY=tvly-your-key-here
+    LANGCHAIN_TRACING_V2=true
+    LANGCHAIN_API_KEY=lsv2-your-key-here (optional, for tracing)
+    ```
+
+### 3. Usage
+Run the CLI application:
+```bash
+python src/main.py
+```
